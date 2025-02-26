@@ -13,6 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+// Route::get('/hello', function () { //can return html which will be parsed
+//     return '<h1> Hello world </h1>';
+// });
+
+                              
+
+// Route::get('/users/{id}/{name}', function ($id, $name) { //can return dynamic variables passed from URL
+//     return 'This is user '.$name. ' with id of ' .$id;
+// });
+
+use App\Http\Controllers\PagesController;
+
+ 
+
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/about', [PagesController::class, 'about']);
+Route::get('/services', [PagesController::class, 'services']);
+
+
+// Route::get('/', 'App\Http\Controllers\PagesController@index'); // this is another way to do the above 
+
+
+Route::get('/about', function () { // in this case since we have a folder called
+    return view('pages.about');    // pages within views, to access files within that folder, 
+});                                // we can use pages.about -OR- pages/about
+
