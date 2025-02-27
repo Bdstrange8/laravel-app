@@ -37,7 +37,7 @@ Route::get('/services', [PagesController::class, 'services']);
 // Route::get('/', 'App\Http\Controllers\PagesController@index'); // this is another way to do the above 
 
 
-Route::get('/about', function () { // in this case since we have a folder called
-    return view('pages.about');    // pages within views, to access files within that folder, 
-});                                // we can use pages.about -OR- pages/about
+// Route::get('/about', function () { // in this case since we have a folder called
+//     return view('pages.about');    // pages within views, to access files within that folder, 
+// });                                // we can use pages.about -OR- pages/about
 
