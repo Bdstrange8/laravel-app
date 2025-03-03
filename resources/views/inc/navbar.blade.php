@@ -16,6 +16,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/services">Services</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts">Blog</a>
+          </li>
           {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/services" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
