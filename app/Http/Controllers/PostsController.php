@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use DB; 
 
 class PostsController extends Controller
 {
@@ -14,7 +15,12 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts =  Post::all();
+        // $posts = Post::all();
+        // return Post::where('title', 'post two')->get(); //get individual post
+        // $posts = DB::select('Select * from posts'); // need to unclude 'use DB;' at top for this.
+        // $posts =  Post::orderBy('created_at','desc')->take(1)->get(); //take limits the amount of posts
+        // $posts =  Post::orderBy('created_at','desc')->get(); //order posts in desired manner (newest first here)
+        $posts =  Post::orderBy('created_at','desc')->paginate(10);
         return view('posts.index')->with('posts' ,$posts);
     }
 
@@ -25,7 +31,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -36,7 +42,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body'  => 'required'
+        ]);
+        
+        //Create Posts
+        $post = new Post;
+        $post->title = $request->input('title');    
+        $post->body = $request->input('body');
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post Created');
     }
 
     /**

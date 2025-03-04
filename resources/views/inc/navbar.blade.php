@@ -28,9 +28,12 @@
             </ul>
           </li> --}}
         </ul>
-        <form role="search">
+        <ul class="nav navbar-nav ms-auto mb-2 mb-sm-0 " >
+          <li class="nav-item"> <a  class="nav-link" href="/posts/create"> Create Post </a> </li>
+        </ul>
+        {{-- <form role="search">
           <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
+        </form> --}}
       </div>
     </div>
   </nav>
