@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
+
+        
         <title>{{config('app.name', 'LSAPP')}}</title>
 
         <!-- Fonts -->
@@ -17,9 +19,8 @@
             @yield('content')
         </div>
 
-        <script src="https://cdn.ckeditor.com/4.25.1-lts/standard-all/ckeditor.js"></script>
-        <script>
-            CKEDITOR.replace( 'article-ckeditor' );
-        </script>
+
+        {{-- Problem section, ckeditor may be payed need to figure out a replacement here --}}
+
     </body>
 </html>

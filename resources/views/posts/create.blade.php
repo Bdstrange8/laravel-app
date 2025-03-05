@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script src="../ckeditor/ckeditor.js"></script>
+
     <h1>Create Post</h1>
     {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store', 'method' => 'POST']) !!}
         <div class='form-group'>
@@ -10,8 +13,12 @@
         <div class='form-group'>
             {{Form::label('body', 'Body')}}
 {{-- below in the id seciton is where you would load in ckeditor if it worked --}}
-            {{Form::textarea('body', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            {{Form::textarea('body', '', ['id' => 'editor1','class' => 'form-control', 'placeholder' => 'Body Text'])}}
         </div>     
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
+
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
 @endsection
