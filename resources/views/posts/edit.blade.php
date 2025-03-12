@@ -2,7 +2,7 @@
 
 @section('content')
 
-<script src="../../ckeditor/ckeditor.js"></script>
+<script type="application/javascript" src="../../ckeditor/ckeditor.js"></script>
 
     <h1>Edit Post</h1>
     {!! Form::open(['action' => ['App\Http\Controllers\PostsController@update', $post->id], 'method' => 'POST']) !!}
@@ -19,7 +19,5 @@
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
 
-    <script>
-        CKEDITOR.replace('editor1');
-    </script>
+
 @endsection

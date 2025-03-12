@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<script type="application/javascript" src="../../ckeditor/ckeditor.js"></script>
 
-<script src="../ckeditor/ckeditor.js"></script>
 
     <h1>Create Post</h1>
     {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store', 'method' => 'POST']) !!}
@@ -17,8 +17,5 @@
         </div>     
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
-
-    <script>
-        CKEDITOR.replace('editor1');
-    </script>
+    
 @endsection
