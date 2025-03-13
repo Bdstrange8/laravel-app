@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}} 
 
 
     <!-- Fonts -->
@@ -26,11 +26,18 @@
         <div class="container">
             @include('inc.messages')
             @yield('content')
-            <script type="text/javascript">
-                CKEDITOR.replace('editor1');
-            </script> 
         </div>
     </div>
+    <script src="../../ckeditor/ckeditor.js"></script>
+
+        <script>
+            if(document.getElementById('editor1')){
+                CKEDITOR.replace('editor1');
+            }
+            else{
+                ;
+            }
+        </script>
 
 
 </body>

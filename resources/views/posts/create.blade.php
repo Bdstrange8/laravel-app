@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<script type="application/javascript" src="../../ckeditor/ckeditor.js"></script>
+{{-- <script type="application/javascript" src="../../ckeditor/ckeditor.js"></script> --}}
 
 
     <h1>Create Post</h1>
