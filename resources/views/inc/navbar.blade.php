@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container">
       <a class="navbar-brand" href="{{ url('/') }}">
@@ -9,7 +10,6 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-
 
           <ul class="navbar-nav me-auto mb-2 mb-sm-0">
             <li class="nav-item">
@@ -28,7 +28,6 @@
               <li class="nav-item"> <a  class="nav-link" href="/posts/create"> Create Post </a> </li>
             </ul> --}}
           </ul>
-
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ms-auto">
               <!-- Authentication Links -->
@@ -51,7 +50,7 @@
                       </a>
 
                       <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/dashboard"> Dashboard</a>
+                          <a class="dropdown-item" href="/dashboard"> Dashboard</a>
                           <a class="dropdown-item" href="{{ route('logout') }}"
                               onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
@@ -63,8 +62,7 @@
                           </form>
                       </div>
                   </li>
-                  {{-- <li><a href="/dashboard">Dashboard</a></li> --}}
-              @endguest
+              @endguest 
           </ul>
       </div>
   </div>

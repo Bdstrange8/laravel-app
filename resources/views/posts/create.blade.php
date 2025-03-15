@@ -14,6 +14,7 @@
             {{Form::label('body', 'Body')}}
 {{-- below in the id seciton is where you would load in ckeditor if it worked --}}
             {{Form::textarea('body', '', ['id' => 'editor1','class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            {{-- {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body Text'])}} --}}
         </div>     
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
