@@ -43,3 +43,7 @@ Route::resource('posts', 'App\Http\Controllers\PostsController'); // full govern
 //     return view('pages.about');    // pages within views, to access files within that folder, 
 // });                                // we can use pages.about -OR- pages/about
 
+
+Auth::routes();
+
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index']);
