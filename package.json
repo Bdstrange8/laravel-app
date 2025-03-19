@@ -25,7 +25,6 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.3",
-        "ckeditor4": "^4.25.1",
         "sass": "^1.85.1",
         "sass-loader": "^16.0.5"
     }
