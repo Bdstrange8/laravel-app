@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', function() {
             CKEDITOR.replace('editor1');
         }
     }
-});
+}); 
+//this helped resolve issues with conflicts between laravel auth and ckeditor
