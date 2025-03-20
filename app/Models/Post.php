@@ -14,4 +14,8 @@ class Post extends Model
     //TIme stamps
     public $timestamps = true;
     use HasFactory;
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }
