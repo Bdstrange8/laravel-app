@@ -4,10 +4,11 @@
     <h1>Posts</h1>
     @if(count($posts) > 0)
         @foreach($posts as $post)
-            <div class="card bg-light">
+        <div class="pb-2">
+            <div class="card p-2 bg-light">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+                    <div class="col-md-3 col-sm-3 rounded ">
+                        <img class="img-thumbnail" style="height:auto" src="/storage/cover_images/{{$post->cover_image}}">
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <h3><a href="/posts/{{$post->id}}"> {{$post->title}} </a> </h3>
@@ -15,6 +16,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         @endforeach
 
         <div> {{$posts->links('pagination::bootstrap-4')}} </div>

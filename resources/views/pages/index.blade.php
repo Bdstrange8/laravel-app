@@ -11,14 +11,19 @@
         This is the laravel app "from scratch series" 
       </p>
       <div class="d-inline-flex gap-2 mb-5">
-        <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" href="/login" type="button">
-          Login 
-        </button>
-        <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" href="/register" type="button">
-          Register
-        </button>
+        @guest
+          @if (Route::has('login'))
+            <li class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill">
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+          @endif
+          @if (Route::has('register'))
+            <li class="btn btn-outline-secondary btn-lg px-4 rounded-pill">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+          @endif
+        @endguest
       </div>
     </div>
   </div>
 @endsection
-   
