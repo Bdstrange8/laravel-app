@@ -26,7 +26,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body style="background-color:antiquewhite">
+    <body>
         <div id="app">
             @include('inc.navbar')
             <div class="container">

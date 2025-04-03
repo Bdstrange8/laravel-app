@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #6486AF">
   <div class="container">
       <a class="navbar-brand" href="{{ url('/') }}">
           {{ config('app.name', 'Laravel') }}
@@ -13,16 +13,16 @@
 
           <ul class="navbar-nav me-auto mb-2 mb-sm-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link puzzle-piece active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link puzzle-piece" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/services">Services</a>
+              <a class="nav-link puzzle-piece" href="/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/posts">Blog</a>
+              <a class="nav-link puzzle-piece" href="/posts">Blog</a>
             </li>
             {{-- <ul class="nav navbar-nav ms-auto mb-2 mb-sm-0 " >
               <li class="nav-item"> <a  class="nav-link" href="/posts/create"> Create Post </a> </li>
@@ -67,3 +67,24 @@
       </div>
   </div>
 </nav>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LSAPP</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav puzzle-nav">
+          <li class="nav-item">
+            <a class="nav-link puzzle-piece first" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link puzzle-piece" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link puzzle-piece" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link puzzle-piece last" href="#">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
